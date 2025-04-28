@@ -1,0 +1,37 @@
+
+* Future Task: Model Training and Evaluation
+- Automatically center-crop if face is detected?
+
+Already Trained:
+ResNet18
+
+EfficientNet-B0 (you’re about to or have started)
+
+🔜 Recommended Next for Training:
+XceptionNet
+
+Pretrained on ImageNet
+
+Performs well on facial manipulation detection
+
+Can be imported via pretrainedmodels or timm
+
+🔬 Optional/Advanced:
+ViT (Vision Transformer)
+
+Attention-based, very effective if you have enough data or compute
+
+🧠 What’s Next?
+If your goal is max accuracy or a research paper, consider this stack:
+
+
+Phase	Model(s)	Use
+Phase 1	ResNet18 + EfficientNet	Ensemble baseline
+Phase 2	Add Xception	Accuracy improvement
+Phase 3	Add ViT	SOTA-level experiment
+Phase 4	Combine (Stacking / Voting)	Final ensemble
+Would you like:
+
+A training script for XceptionNet next?
+
+A benchmark comparison tool for all trained models?
