@@ -65,7 +65,7 @@ python3 resnet50.py
 Uses an optimal weight search algorithm to find the best combination of model weights for the final prediction:
 
 ```bash
-python ensemble_optimal_weight.py
+python3 ensemble_optimal_weight.py
 ```
 
 ### **Basic Ensemble Prediction**
@@ -73,7 +73,7 @@ python ensemble_optimal_weight.py
 Combines predictions from ResNet50, EfficientNetB0, and Xception for more robust classification:
 
 ```bash
-python ensemble.py
+python3 ensemble.py
 ```
 
 Ensure all three models are trained and their weights are saved in the **model/** directory before running these ensemble scripts.
@@ -83,7 +83,7 @@ Ensure all three models are trained and their weights are saved in the **model/*
 To make a single image prediction with the ensemble, you can use the `predict.py` script:
 
 ```bash
-python predict.py
+python3 predict.py
 ```
 ---
 
