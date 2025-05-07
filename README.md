@@ -1,37 +1,116 @@
 # 🧠 Deepfake Image Detector
 
-This project uses Convolutional Neural Networks (CNNs) to detect deepfake images (fake vs. real) based on facial image classification using PyTorch and the **Real and Fake Face Detection** dataset from Kaggle.
+This project uses Convolutional Neural Networks (CNNs) to detect deepfake images (fake vs. real) based on facial image classification using PyTorch. The models include **ResNet50**, **EfficientNetB0**, and **Xception**, each optimized for MPS (Apple Silicon), CUDA (NVIDIA), and CPU execution. An ensemble model is also included, which finds the **optimal weight** for combining the predictions of these models for more accurate and robust classification.
 
 ---
 
-## 📁 Dataset
+## 📁 Dataset Structure
 
-**Source**: [Real and Fake Face Detection - Kaggle](https://www.kaggle.com/datasets/ciplab/real-and-fake-face-detection)
+Ensure your data is organized as follows:
 
-- `data/real/` — Contains genuine facial images.
-- `data/fake/` — Contains AI-generated or manipulated facial images.
-- Format: JPG images.
+```
+data/
+├── train/
+│   ├── fake/
+│   └── real/
+└── test/
+    ├── fake/
+    └── real/
+```
+
+- **train/fake/** — Contains training images of fake faces.
+- **train/real/** — Contains training images of real faces.
+- **test/fake/** — Contains test images of fake faces.
+- **test/real/** — Contains test images of real faces.
 
 ---
 
-## 🚀 Project Structure
-data/ ├── real/ └── fake/
+## 📦 Environment Setup
 
-## Environment Setup
-
-```bash
-python3 -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-
-
-## Environment Setup
+Create and activate a virtual environment:
 
 ```bash
 python3 -m venv venv
-source venv/bin/activate
+source venv/bin/activate  # On Windows: .\venv\Scripts\activate
+```
+
+Install the required packages:
+
+```bash
 pip install -r requirements.txt
+```
 
-python train.py
+---
 
-python predict.py path/to/image.jpg
+## 🚀 Training the Models
+
+Each model script is optimized for both GPU (CUDA/MPS) and CPU training:
+
+- **EfficientNetB0**: Run `efficientnet.py`
+- **ResNet50**: Run `resnet50.py`
+- **Xception**: Run `xception.py`
+
+For example, to train the ResNet50 model:
+
+```bash
+python3 resnet50.py
+```
+
+---
+
+## 🤖 Ensemble Models for Final Prediction
+
+### **Optimal Weight Ensemble**
+
+Uses an optimal weight search algorithm to find the best combination of model weights for the final prediction:
+
+```bash
+python ensemble_optimal_weight.py
+```
+
+### **Basic Ensemble Prediction**
+
+Combines predictions from ResNet50, EfficientNetB0, and Xception for more robust classification:
+
+```bash
+python ensemble.py
+```
+
+Ensure all three models are trained and their weights are saved in the **model/** directory before running these ensemble scripts.
+
+### **Single Model Prediction**
+
+To make a single image prediction without the ensemble, you can use the `predict.py` script:
+
+```bash
+python predict.py
+```
+---
+
+## 📊 Model Evaluation
+
+Confusion matrices and classification reports are automatically generated after training. Check the **model/** directory for saved models and evaluation plots.
+
+---
+
+## 📈 Results and Logs
+
+All training logs, loss curves, and confusion matrices will be saved in the **model/** directory. You can visualize them to track model performance over time.
+
+---
+
+## 🛠️ Future Improvements
+- Add mixed precision training for faster performance.
+- Implement early stopping and learning rate scheduling.
+- Optimize data loading for larger datasets.
+
+---
+
+## 🤖 Contributing
+
+Feel free to submit a pull request if you have improvements or bug fixes.
+
+---
+
+## 📄 License
+This project is licensed under the MIT License.
