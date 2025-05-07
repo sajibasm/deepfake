@@ -78,9 +78,9 @@ python ensemble.py
 
 Ensure all three models are trained and their weights are saved in the **model/** directory before running these ensemble scripts.
 
-### **Single Model Prediction**
+### ** Single Image Ensemble Prediction**
 
-To make a single image prediction without the ensemble, you can use the `predict.py` script:
+To make a single image prediction with the ensemble, you can use the `predict.py` script:
 
 ```bash
 python predict.py
