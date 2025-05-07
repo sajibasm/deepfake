@@ -1,6 +1,6 @@
 # 🧠 Deepfake Image Detector
 
-This project uses Convolutional Neural Networks (CNNs) to detect deepfake images (fake vs. real) based on facial image classification using PyTorch. The models include **ResNet50**, **EfficientNetB0**, and **Xception**, each optimized for MPS (Apple Silicon), CUDA (NVIDIA), and CPU execution. An ensemble model is also included, which finds the **optimal weight** for combining the predictions of these models for more accurate and robust classification.
+This project uses Convolutional Neural Networks (CNNs) to detect deepfake images (fake vs. real) based on facial image classification using PyTorch. The models include **ResNet50**, **EfficientNetV2**, and **Xception**, each optimized for MPS (Apple Silicon), CUDA (NVIDIA), and CPU execution. An ensemble model is also included, which finds the **optimal weight** for combining the predictions of these models for more accurate and robust classification.
 
 ---
 
@@ -46,7 +46,7 @@ pip install -r requirements.txt
 
 Each model script is optimized for both GPU (CUDA/MPS) and CPU training:
 
-- **EfficientNetB0**: Run `efficientnet.py`
+- **EfficientNetV2**: Run `efficientnet.py`
 - **ResNet50**: Run `resnet50.py`
 - **Xception**: Run `xception.py`
 
