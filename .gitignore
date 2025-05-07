@@ -1,0 +1,172 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+*.so
+
+# Virtual environments
+.venv/
+venv/
+env/
+*.env
+*.venv
+ENV/
+env.bak/
+venv.bak/
+*.virtualenv
+.venv/
+
+# Model and package files
+model
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+*.ipynb_checkpoints/
+
+# Jupyter Notebook configuration
+.jupyter/
+*.jupyter
+
+# VSCode settings
+.vscode/
+*.code-workspace
+
+# IDE settings
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.spyproject/
+*.ropeproject/
+
+# Logs and temporary files
+logs/
+*.log
+*.out
+*.err
+*.bak
+*.swp
+*.swo
+*.DS_Store
+*.coverage
+coverage.xml
+.cache/
+coverage/
+*.cover
+.hypothesis/
+.pytest_cache/
+.cache/
+__pycache__/
+*.prof
+*.profile
+*.pstats
+
+# Data files
+*.h5
+*.hdf5
+*.csv
+*.tsv
+*.json
+*.db
+*.sqlite
+*.pkl
+*.pickle
+*.npz
+*.npy
+*.tar.gz
+*.zip
+*.tar
+
+# Model files
+*.ckpt
+*.pth
+*.pt
+*.onnx
+*.tflite
+*.h5
+*.hdf5
+*.weights
+
+# TensorBoard log files
+runs/
+events.out.tfevents.*
+*.tensorboard
+
+# Machine Learning / Deep Learning Artifacts
+mlruns/
+logs/
+checkpoints/
+*.model
+*.pb
+saved_model/
+
+# PyTorch Lightning
+lightning_logs/
+
+# TensorFlow
+.tf_config/
+__pycache__/
+*.pbtxt
+*.pb
+*.tflite
+*.tfjs
+*.tfrecord
+
+# Miscellaneous
+*.log
+*.sqlite3
+*.db
+*.db-journal
+*.sqlite
+*.pyc
+*.pyo
+*.pyd
+
+# Environment files
+.env
+*.env
+*.env.*
+*.envrc
+.venv
+.env.bak
+.envrc.bak
+
+# DVC (Data Version Control)
+.dvc/
+.dvcignore
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*.orig
+*.rej
+*.un~
+*.tmp.*
+
+# Docker
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Cache
+__pycache__/
+*.egg-info/
+.eggs/
+*.manifest
+*.spec
+
+# PyInstaller
+*.spec
+
+# Config files
+config.json
+params.yaml
+
+# HDF5 files
+*.h5
+*.hdf5
+*.h5f
